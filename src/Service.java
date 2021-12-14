@@ -22,7 +22,7 @@ public class Service {
         session.save(account);
         transaction.commit();
         session.close();
-        //   sessionFactory.close();
+         //  sessionFactory.close();
 
     }
 
@@ -45,10 +45,13 @@ public class Service {
     public List<User> findByFirstName(String firstName){
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        String sql="select * from user where firstName='"+firstName+"'";
+        String sql="select * from user where firstName= : firstName";
         SQLQuery query=session.createSQLQuery(sql);
         query.addEntity(User.class);
-        return query.list();
+        query.setParameter("firstName",firstName);
+        List<User>list= query.list();
+        session.close();
+        return list;
 
     }
     public List<User> findByLastName(String lastName){
@@ -57,7 +60,10 @@ public class Service {
         String sql="select * from user where lastName = :lastName";
         SQLQuery query=session.createSQLQuery(sql);
         query.addEntity(User.class);
-        return query.list();
+        query.setParameter("lastName",lastName);
+        List<User>list= query.list();
+        session.close();
+        return list;
 
     }
     
