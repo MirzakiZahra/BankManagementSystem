@@ -66,6 +66,17 @@ public class Service {
         return list;
 
     }
-    
+    public User findByCardNumber(int cardNumber){
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        String sql="select * from account where cardNumber = :cardNumber";
+        SQLQuery query=session.createSQLQuery(sql);
+        query.addEntity(Account.class);
+        query.setParameter("cardNumber",cardNumber);
+        Account account= (Account) query.list().get(0);
+        session.close();
+        return account.getUser();
+
+    }
 
 }
