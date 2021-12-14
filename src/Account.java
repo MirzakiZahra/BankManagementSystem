@@ -2,6 +2,7 @@ import jdk.jfr.Timestamp;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -31,7 +32,7 @@ public class Account {
     private Date expire;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "account")
     private List<Transaction>transactionList=new ArrayList<>();
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private User user;
 
     public Account() {

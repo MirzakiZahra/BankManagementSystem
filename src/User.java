@@ -20,7 +20,7 @@ public class User {
     private String firstName;
     private String lastName;
     private int nationalCode;
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "user")
     private List<Account> accountList = new ArrayList<>();
     @Enumerated(EnumType.STRING)
     private UserType userType;

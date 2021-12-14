@@ -1,9 +1,12 @@
+import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.loader.custom.sql.SQLQueryParser;
 
 import java.util.Date;
+import java.util.List;
 
 public class Service {
     static SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
@@ -19,11 +22,11 @@ public class Service {
         session.save(account);
         transaction.commit();
         session.close();
-        sessionFactory.close();
+        //   sessionFactory.close();
 
     }
 
-    public void createUser(String firstName, String lastName, int nationalCode
+    public User createUser(String firstName, String lastName, int nationalCode
             , User.UserType userType) {
         User user = new User(firstName, lastName, nationalCode, userType);
 
@@ -32,7 +35,22 @@ public class Service {
         session.save(user);
         transaction.commit();
         session.close();
-        sessionFactory.close();
+        return user;
 
     }
+
+    public void close() {
+        sessionFactory.close();
+    }
+    public List<User> findByFirstName(String firstName){
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        String sql="select * from user where firstName='"+firstName+"'";
+        SQLQuery query=session.createSQLQuery(sql);
+        return query.list();
+
+
+    }
+    
+
 }
