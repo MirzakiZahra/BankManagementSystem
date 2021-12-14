@@ -50,6 +50,14 @@ public class Service {
         query.addEntity(User.class);
         return query.list();
 
+    }
+    public List<User> findByLastName(String lastName){
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        String sql="select * from user where lastName = :lastName";
+        SQLQuery query=session.createSQLQuery(sql);
+        query.addEntity(User.class);
+        return query.list();
 
     }
     
