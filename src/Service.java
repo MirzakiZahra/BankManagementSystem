@@ -91,13 +91,14 @@ public class Service {
 
     }
     public void withdraw(int caredNumber,int fee){
-       Account account= findAccountByCardNumber(caredNumber);
-       float temp=account.getBalance()-fee;
-       account.setBalance(temp);
+        Account account= findAccountByCardNumber(caredNumber);
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        String sql="update balance from account where cardNumber = :cardNumber";
-        session.createSQLQuery(sql).executeUpdate();
+        account = session.load(Account.class,account.getId());
+        float temp=account.getBalance()-fee;
+        account.setBalance(temp);
+        session.update(account);
+        transaction.commit();
         session.close();
 
 

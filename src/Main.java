@@ -13,6 +13,7 @@ public class Main {
         System.out.println(service.findByLastName("mirzaki" +
                 ""));
         System.out.println(service.findByCardNumber(6554));
+        service.withdraw(6554,50);
         service.close();
     }
 }
