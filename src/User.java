@@ -20,7 +20,7 @@ public class User {
     private String firstName;
     private String lastName;
     private int nationalCode;
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Account> accountList = new ArrayList<>();
     @Enumerated(EnumType.STRING)
     private UserType userType;
@@ -30,6 +30,16 @@ public class User {
     private Date lastUpdate;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private List<UpdateInfo> updateInfos = new ArrayList<>();
+
+    public User() {
+    }
+
+    public User(String firstName, String lastName, int nationalCode, UserType userType) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.nationalCode = nationalCode;
+        this.userType = userType;
+    }
 
     enum UserType {
         GOODDEALLER, BADDEALER, NOHISTORY;
