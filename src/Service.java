@@ -47,6 +47,7 @@ public class Service {
         Transaction transaction = session.beginTransaction();
         String sql="select * from user where firstName='"+firstName+"'";
         SQLQuery query=session.createSQLQuery(sql);
+        query.addEntity(User.class);
         return query.list();
 
 

@@ -41,6 +41,16 @@ public class User {
         this.userType = userType;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", nationalCode=" + nationalCode +
+                ", userType=" + userType +
+                '}';
+    }
+
     enum UserType {
         GOODDEALLER, BADDEALER, NOHISTORY;
     }

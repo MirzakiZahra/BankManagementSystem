@@ -2,24 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3078b25a-5f4d-4360-bc25-ec9de735a9ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/out/production/HW15/Account$AccountType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HW15/Account.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HW15/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HW15/Service.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HW15/Transaction$TransactionType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HW15/Transaction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HW15/UpdateInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HW15/User$UserType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HW15/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HW15/hibernate.cfg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/txw2_2_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW15.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HW15.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW15/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW15/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW15/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW15/Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW15/User$UserType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW15/User$UserType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW15/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW15/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +34,20 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="HW15" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -52,7 +56,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1639471451625</updated>
-      <workItem from="1639471467406" duration="705000" />
+      <workItem from="1639471467406" duration="1710000" />
     </task>
     <servers />
   </component>
