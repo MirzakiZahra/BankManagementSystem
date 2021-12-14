@@ -10,7 +10,9 @@ public class Main {
         service.createAccount(user, 1111111, 222222, Account.AccountType.INTERESTFREE,
                 200000, 3450, new Date(2024, 10, 0));
         System.out.println(service.findByFirstName("zahra"));
-        System.out.println(service.findByLastName("mirzaki"));
+        System.out.println(service.findByLastName("mirzaki" +
+                ""));
+        System.out.println(service.findByCardNumber(6554));
         service.close();
     }
 }

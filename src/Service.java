@@ -45,7 +45,7 @@ public class Service {
     public List<User> findByFirstName(String firstName){
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        String sql="select * from user where firstName= : firstName";
+        String sql="select * from user where firstName= :firstName";
         SQLQuery query=session.createSQLQuery(sql);
         query.addEntity(User.class);
         query.setParameter("firstName",firstName);
@@ -78,5 +78,31 @@ public class Service {
         return account.getUser();
 
     }
+    public Account findAccountByCardNumber(int cardNumber){
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        String sql="select * from account where cardNumber = :cardNumber";
+        SQLQuery query=session.createSQLQuery(sql);
+        query.addEntity(Account.class);
+        query.setParameter("cardNumber",cardNumber);
+        Account account= (Account) query.list().get(0);
+        session.close();
+        return account;
+
+    }
+    public void withdraw(int caredNumber,int fee){
+       Account account= findAccountByCardNumber(caredNumber);
+       float temp=account.getBalance()-fee;
+       account.setBalance(temp);
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        String sql="update balance from account where cardNumber = :cardNumber";
+        session.createSQLQuery(sql).executeUpdate();
+        session.close();
+
+
+
+    }
+
 
 }
