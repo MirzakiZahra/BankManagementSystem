@@ -81,6 +81,34 @@ public class Service {
         return account.getUser();
 
     }
+    public User findByNationalCode(int nationalCode){
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        String sql = "select * from user where nationalCode = :nationalCode";
+        SQLQuery query = session.createSQLQuery(sql);
+        query.addEntity(User.class);
+        query.setParameter("nationalCode", nationalCode);
+        User user = (User) query.list().get(0);
+        transaction.commit();
+        session.close();
+        return user;
+
+    }
+    public Account.AccountType findAccountType(String accountType){
+        switch (accountType){
+            case "i":
+                return Account.AccountType.INTERESTFREE;
+               // break;
+            case "s":
+                return Account.AccountType.SHORTTERM;
+            case "l":
+                return Account.AccountType.LONGTERM;
+            case"c":
+                return Account.AccountType.CURRENT;
+
+        }
+        return null;
+    }
 
     public Account findAccountByCardNumber(int cardNumber) {
         Session session = sessionFactory.openSession();
@@ -95,11 +123,13 @@ public class Service {
 
     }
 
-    public void withdraw(int caredNumber, int fee) {
-        Account account = findAccountByCardNumber(caredNumber);
+    public void withdraw(int cardNumber, int fee) {
+        Account account = findAccountByCardNumber(cardNumber);
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        account = session.load(Account.class, account.getId());
+        Transactions transactions = new Transactions(fee,new Date(),
+                Transactions.TransactionType.WITHDRAW,account);
+        account = this.saveTransaction(cardNumber,transactions,account);
         float temp = account.getBalance() - fee;
         account.setBalance(temp);
         session.update(account);
@@ -112,7 +142,9 @@ public class Service {
         Account account = findAccountByCardNumber(cardNumber);
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        account = session.load(Account.class, account.getId());
+        Transactions transactions = new Transactions(fee,new Date(),
+                Transactions.TransactionType.DEPOSIT,account);
+        account = this.saveTransaction(cardNumber,transactions,account);
         float temp = account.getBalance() + fee;
         account.setBalance(temp);
         session.update(account);
@@ -120,5 +152,8 @@ public class Service {
         session.close();
     }
 
-
+    public Account saveTransaction(int cardNumber, Transactions accountTransaction,Account account){
+        account.getTransactionList().add(accountTransaction);
+        return account;
+    }
 }

@@ -17,7 +17,7 @@
         <property name="format_sql">true</property>
         <mapping class="Account"/>
         <mapping class="User"/>
-        <mapping class="Transaction"/>
+        <mapping class="Transactions"/>
         <mapping class="UpdateInfo"/>
 
 

@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d27f55e-e31d-4701-8c4a-2cd8d06b5b45" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/required.xml" beforeDir="false" />
+    <list default="true" id="ca31e054-95da-4b0a-9c80-962b899d59a5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/byte_buddy_1_11_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/2/OnlineShop/src.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/untitled/src/main/java/inheritance/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/untitled/src/main/java/inheritance/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/untitled/src/main/java/inheritance/Maneger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/untitled/src/main/java/inheritance/Programer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW15.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HW15.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW7-with-hibernate" beforeDir="false" afterPath="$PROJECT_DIR$/HW7-with-hibernate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw8-with-hibernate/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hw8-with-hibernate/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW15/Account$AccountType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW15/Account$AccountType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW15/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW15/Account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW15/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW15/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW15/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW15/Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transactions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +32,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="22M39mIc4wdp7gQWZCgu2VDPZ1D" />
+  <component name="ProjectId" id="22U74Qo3M8s3n1EJYZ0kyBCCG3o" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -24,21 +41,53 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mysql-connector-java-8.0.25.jar" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="HW15" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7d27f55e-e31d-4701-8c4a-2cd8d06b5b45" name="Changes" comment="" />
-      <created>1639633484743</created>
+      <changelist id="ca31e054-95da-4b0a-9c80-962b899d59a5" name="Changes" comment="" />
+      <created>1639880123222</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1639633484743</updated>
-      <workItem from="1639633517382" duration="1382000" />
+      <updated>1639880123222</updated>
+      <workItem from="1639880141268" duration="8419000" />
+      <workItem from="1639907876447" duration="1511000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

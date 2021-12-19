@@ -2,9 +2,7 @@ import jdk.jfr.Timestamp;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -12,7 +10,6 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-@Data
 @Setter
 @Getter
 
@@ -30,10 +27,14 @@ public class Account {
     private int cvv;
     @Timestamp
     private Date expire;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "account")
-    private List<Transaction>transactionList=new ArrayList<>();
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "account",fetch = FetchType.EAGER)
+    private List<Transactions>transactionList=new ArrayList<>();
     @ManyToOne(cascade = CascadeType.ALL)
     private User user;
+
+  //  public User getUser() {
+    //    return user;
+    //}
 
     public Account() {
     }
